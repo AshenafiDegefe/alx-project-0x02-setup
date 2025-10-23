@@ -1,6 +1,7 @@
 // pages/home.tsx or App.tsx (representing the /home page)
 import React, { useState, useCallback } from 'react';
 import PostModal from '@/components/common/PostModal';
+import Header from '@/components/layout/Header';
 
 type PostData = {
   id: string;
@@ -31,6 +32,7 @@ const HomePage: React.FC = () => {
 
   return (
     <div style={{ maxWidth: '800px', margin: '0 auto', padding: '20px' }}>
+        <Header />
       <h1>Home Feed</h1>
       
       {/* Button to open the modal */}

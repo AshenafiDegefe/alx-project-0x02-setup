@@ -14,3 +14,12 @@ export interface PostModalProps {
   onClose: () => void;
   onPost: (data: PostData) => void; // Callback to pass data to the parent
 }
+
+export type ButtonSize = 'small' | 'medium' | 'large';
+export type ButtonShape = 'rounded-sm' | 'rounded-md' | 'rounded-full';
+
+export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  children: React.ReactNode; 
+  size?: ButtonSize; 
+  shape?: ButtonShape;
+}
