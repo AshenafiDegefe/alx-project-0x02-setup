@@ -23,3 +23,18 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
   size?: ButtonSize; 
   shape?: ButtonShape;
 }
+
+interface Address {
+  street: string;
+  suite: string;
+  city: string;
+  zipcode: string;
+}
+
+export interface UserProps {
+  id: number;
+  name: string;
+  email: string;
+  address: Address;
+  // Note: API returns more fields, but we only type the ones we use
+}
